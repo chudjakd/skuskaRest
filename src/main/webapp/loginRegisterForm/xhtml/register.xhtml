@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<head>
+    <title>Title</title>
+</head>
+<body>
+
+<div class="registerForm">
+    <h:form>
+        <div class="registerName">
+            <label for="name">Name</label>
+            <h:inputText id="name" value="#{register.name}"/>
+        </div>
+
+        <div class="registerSurname">
+            <label for="surname">Surname</label>
+            <h:inputText id="surname" value="#{register.surname}"/>
+        </div>
+
+        <div class="registerEmail">
+            <label for="email">Email</label>
+            <h:inputText id="email" value="#{register.email}"/>
+        </div>
+
+        <div class="registerPhone">
+            <label for="phone">Phone</label>
+            <h:inputText id="phone" value="#{register.phoneNumber}"/>
+        </div>
+
+        <div class="registerUsername">
+            <label for="username">Username</label>
+            <h:inputText id="username" value="#{register.username}"/>
+        </div>
+
+        <div class="registerPassword">
+            <label for="password">Password</label>
+            <h:inputText id="password" value="#{register.pass}"/>
+        </div>
+        <h:commandButton value="Register" action="#{loginRegisterController.onRegistration()}"/>
+    </h:form>
+
+</div>
+
+</body>
+</html>

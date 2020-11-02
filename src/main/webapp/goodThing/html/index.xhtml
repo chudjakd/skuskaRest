@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<head>
+    <title>Indexos</title>
+    <link href="../css/indexStyle.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+
+<div id="header">
+    <h:form>
+        <h:commandButton id="mainPage" value="Main page"/>
+        <h:commandButton id="createNew" value="Create new" action="createNew"/>
+    </h:form>
+</div>
+
+<h:dataTable value="#{goodThingController.aaa()}" var="thing" rowClasses="row">
+
+    <h:column id="id" >
+        <f:facet name="header">Id</f:facet>
+        <h:outputText value="#{thing.id}">
+            <f:convertNumber/>
+        </h:outputText>
+    </h:column>
+
+    <h:column id="Name">
+        <f:facet name="header">Name</f:facet>
+        <h:outputText value="#{thing.name}"/>
+    </h:column>
+
+    <h:column id="description">
+        <f:facet name="header">Description</f:facet>
+        <h:outputText value="#{thing.description}"/>
+    </h:column>
+
+    <h:column id="rating">
+        <f:facet name="header">Rating</f:facet>
+        <h:outputText value="#{thing.rating}"/>
+    </h:column>
+
+    <h:column id="updateDelete">
+        <f:facet name="header">Update/Delete</f:facet>
+        <h:form>
+            <h:commandButton id="edit" value="Edit" action="#{goodThingController.editGoodThing(thing)}"/>
+            <h:commandButton id="delete" value="Delete" action="#{goodThingController.onSubmitDelete(thing)}"/>
+        </h:form>
+    </h:column>
+
+</h:dataTable>
+
+</body>
+</html>

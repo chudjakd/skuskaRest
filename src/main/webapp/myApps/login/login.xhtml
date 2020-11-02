@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<head>
+    <title>Title</title>
+</head>
+<h:body>
+
+<ui:composition template="/layout/login/Layout.xhtml">
+
+<!--    <ui:define name="header"></ui:define>-->
+
+    <ui:define name="content">
+        <h:form action="">
+            First Name:<h:inputText value="#{boss.name}"></h:inputText>
+            Last Name: <h:inputText value="#{boss.surname}"></h:inputText>
+            <h:commandButton value="Submit" action="#{loginController.onSubmit}"></h:commandButton>
+        </h:form>
+    </ui:define>
+    <ui:define name="footer">Moj novy foter</ui:define>
+
+
+</ui:composition>
+
+</h:body>
+</html>

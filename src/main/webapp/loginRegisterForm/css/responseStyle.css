@@ -1,0 +1,11 @@
+
+td{
+    text-align: center;
+}
+tbody tr{
+    border-bottom: 1px solid lightgray;
+}
+
+.tableHeader{
+    border-bottom: 1px solid black;
+}

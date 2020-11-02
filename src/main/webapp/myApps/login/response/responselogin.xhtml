@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<head>
+    <title>Title</title>
+</head>
+<body>
+<h1>Login succesful</h1>
+<p>Hellou <b>#{boss.name}</b> login was great</p>
+<p>I hope you vil hev tudej nice dej <b>#{boss.surname}</b></p>
+<h2>This ar our castomers</h2>
+<ul>
+    <ui:repeat value="#{boss.allCustomers}" var="customer">
+    <li>
+        #{customer.name}
+        #{customer.surname}
+    </li>
+    </ui:repeat>
+</ul>
+
+
+<script type="application/javascript" src="../logintryjavascript.js"/>
+</body>
+</html>

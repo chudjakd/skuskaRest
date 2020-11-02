@@ -1,0 +1,10 @@
+
+
+body{
+    max-width: 500px;
+}
+input{
+    display: block;
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+}

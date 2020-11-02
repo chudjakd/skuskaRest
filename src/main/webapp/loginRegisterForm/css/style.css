@@ -1,0 +1,42 @@
+
+body{
+
+}
+
+
+input{
+    padding: 0.3em;
+    display: block;
+}
+form{
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 2em;
+}
+
+#labelRememberMe,
+.checkBoxRememberMe
+{
+    display: inline-block;
+
+}
+.checkBoxRememberMe{
+    padding: 0.2em;
+}
+
+.nameDiv,
+.passwordDiv,
+.rememberMeDiv{
+    padding-bottom: 1em;
+}
+
+.loginRegisterDiv input{
+    display: inline-block;
+
+}
+
+.loginButton{
+    margin-left: 1em;
+    margin-right: 11em;
+}

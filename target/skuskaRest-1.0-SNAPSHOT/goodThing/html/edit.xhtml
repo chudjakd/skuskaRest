@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<head>
+    <title>Title</title>
+</head>
+<body>
+<h1>Hey i think that you are here because you wanna edit.. so let's go edit</h1>
+
+Toto je name: #{goodThing.name}
+<div class="editForm">
+
+    <h:form>
+
+        <div class="name">
+            Name something:<h:inputText value="#{goodThing.name}" />
+        </div>
+
+        <div class="description">
+            Descripte that thing:<h:inputText value="#{goodThing.description}" />
+        </div>
+
+        <div class="rating">
+            Rating:
+            <h:selectOneMenu
+                    id="ratingValue" required="true"
+                    converter="javax.faces.Integer"
+                    value="#{goodThing.rating}"
+            >
+
+                <f:selectItem
+                        itemValue="1"
+                        itemLabel="1"
+                />
+                <f:selectItem
+                        itemValue="2"
+                        itemLabel="2"
+                />
+                <f:selectItem
+                        itemValue="3"
+                        itemLabel="3"
+                />
+                <f:selectItem
+                        itemValue="4"
+                        itemLabel="4"
+                />
+                <f:selectItem
+                        itemValue="5"
+                        itemLabel="5"
+                />
+<!--                <f:convertNumber integerOnly="true"/>-->
+            </h:selectOneMenu>
+
+        </div>
+
+        <h:commandButton value="Edit" action="#{goodThingController.confirmEditGoodThing()}"/>
+
+    </h:form>
+
+</div>
+</body>
+</html>
